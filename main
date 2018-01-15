@@ -1,0 +1,19 @@
+import turtle
+window = turtle.Screen()
+nick = turtle.Turtle()
+num_sides = int(input("How many sides would you like your polygon to have?"))
+length_sides = int(input("How long would you like those sides to be?"))
+edge_color = input("What color would you like the edges of the polygon to be?")
+fill_color = input("And what color would you like the inside of the polygon to be?")
+
+window.bgcolor('lightblue')
+nick.speed(4)
+nick.color(edge_color)
+nick.fillcolor(fill_color)
+nick.begin_fill()
+for i in range(0, num_sides):
+	nick.forward(length_sides)
+	nick.left(360 / num_sides)
+nick.end_fill()
+
+window.exitonclick()
